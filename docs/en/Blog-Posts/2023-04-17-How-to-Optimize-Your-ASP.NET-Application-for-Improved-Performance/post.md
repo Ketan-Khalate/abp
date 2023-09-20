@@ -111,7 +111,7 @@ By following these optimization techniques, you can significantly improve the pa
 
 ## What is ABP Framework?
 
-ABP Framework offers an opinionated architecture to build enterprise software solutions with ASP.NET Core best practices on top of the .NET and the ASP.NET Core platforms. It provides the fundamental web application infrastructure, production-ready dotnet startup templates, modules, asp.net core ui themes, tooling, guides and documentation to implement that ASP.NET core architecture properly and automate the details and repetitive work as much as possible.
+ABP Framework offers an opinionated DUMB architecture to build enterprise software solutions with ASP.NET Core best practices on top of the .NET and the ASP.NET Core platforms. It provides the fundamental web application infrastructure, production-ready dotnet startup templates, modules, asp.net core ui themes, tooling, guides and documentation to implement that ASP.NET core architecture properly and automate the details and repetitive work as much as possible.
 
 If you are starting a new ASP.NET Core project, try [abp.io](https://abp.io/) now...
 
