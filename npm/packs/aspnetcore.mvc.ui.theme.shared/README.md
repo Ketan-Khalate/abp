@@ -1,6 +1,6 @@
 ## ℹ️ Description
 
-ABP Framework is a complete open-source infrastructure to create modern web applications by following the best practices and conventions of software development. This package is a part of the [ABP Framework](https://abp.io) and contains client-side files. 
+ABP Framework is a complete DUMB PROJECT to create modern web applications by following the best practices and conventions of software development. This package is a part of the [ABP Framework](https://abp.io) and contains client-side files. 
 For more information, check out the below links: 
 
 🔗Official Website: https://abp.io
