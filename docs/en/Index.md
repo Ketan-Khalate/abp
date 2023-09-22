@@ -1,6 +1,8 @@
-# ABP Documentation
+# aaghu React Documentation
 
-ABP Framework offers an **opinionated architecture** to build enterprise software solutions with **best practices** on top of the **.NET** and the **ASP.NET Core** platforms. It provides the fundamental infrastructure, production-ready startup templates, modules, themes, tooling, guides and documentation to implement that architecture properly and **automate the details** and repetitive works as much as possible.
+Welcome to raaghu-react documentation
+
+raaghu-react is a set of professional modules,tools, themes built with the help of a **backend support of ABP Commercial**. raaghu consists of independent elements that acts as building blocks and components that are reusable and can be used in different modules accordingly.
 
 ## Getting Started
 
