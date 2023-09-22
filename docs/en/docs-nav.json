@@ -754,49 +754,6 @@
       ]
     },
     {
-      "text": "Real Time",
-      "items": [
-        {
-          "text": "SignalR Integration",
-          "path": "SignalR-Integration.md"
-        }
-      ]
-    },
-    {
-      "text": "Dapr Integration",
-      "path": "Dapr/Index.md"
-    },
-    {
-      "text": "Testing",
-      "path": "Testing.md"
-    },
-    {
-      "text": "Deployment",
-      "path": "Deployment/Index.md",
-      "items": [
-        {
-          "text": "Configuring OpenIddict",
-          "path": "Deployment/Configuring-OpenIddict.md"
-        },
-        {
-          "text": "Configuring for Production",
-          "path": "Deployment/Configuring-Production.md"
-        },
-        {
-          "text": "Deploying to a Clustered Environment",
-          "path": "Deployment/Clustered-Environment.md"
-        },
-        {
-          "text": "Distributed / Microservice Solutions",
-          "path": "Deployment/Distributed-Microservice.md"
-        },
-        {
-          "text": "Optimizing for Production",
-          "path": "Deployment/Optimizing-Production.md"
-        }
-      ]
-    },
-    {
       "text": "Application Modules",
       "items": [
         {
