@@ -1,4 +1,4 @@
-# Raaghu React Documentation
+# RRaaghu React Documentation
 
 Welcome to raaghu-react documentation
 
