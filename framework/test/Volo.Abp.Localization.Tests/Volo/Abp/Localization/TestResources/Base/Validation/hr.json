@@ -1,7 +1,0 @@
-{
-  "culture": "hr",
-  "texts": {
-    "ThisFieldIsRequired": "Ovo polje je obavezno",
-    "MaxLenghtErrorMessage": "Ovo polje može imati najviše '{0}' znakova"
-  }
-}
