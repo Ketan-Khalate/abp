@@ -1,8 +1,10 @@
-# ABP Documentation
+# Raaghu Documentation
 
-ABP Framework offers an **opinionated architecture** to build enterprise software solutions with **best practices** on top of the **.NET** and the **ASP.NET Core** platforms. It provides the fundamental infrastructure, production-ready startup templates, modules, themes, tooling, guides and documentation to implement that architecture properly and **automate the details** and repetitive works as much as possible.
+Welcome to raaghu-react documentation
 
-## Getting Started
+raaghu-react is a set of professional modules,tools, themes built with the help of a **backend support of ABP Commercial**. raaghu consists of independent elements that acts as building blocks and components that are reusable and can be used in different modules accordingly.
+
+## Setup your development environment
 
 * [Quick Start](Tutorials/Todo/Overall.md) is a single-part, quick-start tutorial to build a simple application with the ABP Framework. Start with this tutorial if you want to quickly understand how ABP works.
 * [Getting Started](Getting-Started.md) guide can be used to create and run ABP based solutions with different options and details.
