@@ -4,7 +4,7 @@ Welcome to raaghu-react documentation
 
 raaghu-react is a set of professional modules,tools, themes built with the help of a **backend support of ABP Commercial**. raaghu consists of independent elements that acts as building blocks and components that are reusable and can be used in different modules accordingly.
 
-## Getting Started
+## Setup your development environment
 
 * [Quick Start](Tutorials/Todo/Overall.md) is a single-part, quick-start tutorial to build a simple application with the ABP Framework. Start with this tutorial if you want to quickly understand how ABP works.
 * [Getting Started](Getting-Started.md) guide can be used to create and run ABP based solutions with different options and details.
