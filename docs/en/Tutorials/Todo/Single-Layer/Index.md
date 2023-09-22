@@ -8,7 +8,7 @@
 }
 ````
 
-This is a single-part quick-start tutorial to build a simple todo application with the ABP Framework. Here's a screenshot from the final application OPEN_SOURCE and ONE_TO_ONE:
+This is a single-part quick-start tutorial to build a simple todo application with the ABP Framework. Here's a screenshot from the final application:
 
 ![todo-list](../todo-list.png)
 

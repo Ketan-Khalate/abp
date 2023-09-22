@@ -12,21 +12,8 @@
         <abp-style src="/Pages/Documents/Shared/Styles/vs.css" />
     </abp-style-bundle>
 }
-
-<!-- Header section -->
-<header>
-    <nav>
-        <!-- Add your header content here -->
-        <h1>Your Website Name</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
 <div class="p-5">
+
     @if (Model.Projects == null || !Model.Projects.Any())
     {
         <div class="alert alert-secondary text-center" role="alert">
@@ -51,4 +38,5 @@
             </ul>
         </p>
     }
+
 </div>
