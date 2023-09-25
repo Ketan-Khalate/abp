@@ -25,6 +25,28 @@
     ViewBag.CanonicalUrl = Model.IsLatestVersion ? null : Model.GetFullUrlOfTheLatestDocument(); //issue #12355
 }
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@PageLayout.Content.Title</title>
+    <!-- Add your head content here -->
+</head>
+<body>
+     <header>
+        <div class="header-top d-flex align-items-center">
+            <span>Raaghu</span>
+        </div>
+    </header>
+
+            <!-- @if (Model.LoadSuccess)
+            {
+                <div class="docs-page" data-spy="scroll" data-bs-target="#docs-sticky-index">
+
+
+            } -->
+    </body>
+</html>
+
 @section styles {
     <abp-style-bundle name="@typeof(IndexModel).FullName">
         <abp-style type="@typeof(PrismjsStyleBundleContributor)"/>
@@ -58,151 +80,6 @@
 {
     <div class="docs-page" data-spy="scroll" data-bs-target="#docs-sticky-index">
 
-    <div class="docs-sidebar-wrapper docs-sidebar">
-
-        <div class="docs-top">
-            <nav class="navbar navbar-logo">
-                @if (!Model.Project.Name.IsNullOrWhiteSpace())
-                {
-                    <a class="navbar-brand" href="@Model.CreateVersionLink(Model.LatestVersionInfo, Model.GetSpecificVersionOrLatest())">
-                        <span id="ProjectName">@Model.Project.Name</span><br>
-                        <strong class="display-block">
-                            @L["Documents"]
-                        </strong>
-                    </a>
-                }
-
-                @if (!Model.Document.Project.MainWebsiteUrl.IsNullOrWhiteSpace())
-                {
-                    <a href="@Model.Document.Project.MainWebsiteUrl" class="go-back-site" id="GoToMainWebSite">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                }
-
-                <div class="for-mobile">
-                    <div class="navbar-dark">
-                        <button type="button" class="open-dmenu navbar-toggler" aria-label="Close">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <div class="docs-tree-list">
-            <div class="row gx-2 mb-2 ">
-                @if (Model.ShowProjectsCombobox && Model.ProjectSelectItems.Count > 1)
-                {
-                    <div class="col-12 mb-2">
-
-                        <div class="docs-version">
-                            <span>Project</span>
-                            <div class="version-select">
-                                <div class="input-group">
-                                    <span class="input-group-text d-none">
-                                        <i class="fa fa-folder-open" aria-hidden="true" data-toggle="tooltip" title="@L["Project"]"></i>
-                                    </span>
-
-                                    <select asp-items="Model.ProjectSelectItems"
-                                            class="form-select"
-                                            onchange="window.location.pathname = this.value">
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                }
-                @if (Model.VersionSelectItems.Any())
-                {
-                    <div class="col">
-                        <div class="@(Model.VersionSelectItems.Count > 1 ? "pe-0" : "")">
-                            <div class="docs-version @(Model.VersionSelectItems.Count > 1 ? "pe-1" : "")">
-                                <span>@L["Version"]</span>
-                                <div class="version-select">
-                                    <div class="input-group">
-                                        <span class="input-group-text">
-                                            <i class="fas fa-code-branch" aria-hidden="true" data-bs-toggle="tooltip" title="@L["Version"]"></i>
-                                        </span>
-
-                                        <select asp-items="Model.VersionSelectItems"
-                                                class="form-select"
-                                                onchange="if (this.value) { window.location.replace(this.value) }">
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                }
-                @if (Model.LanguageSelectListItems.Count > 1)
-                {
-                    <div class="col">
-                        <div>
-                            <div class="docs-version docs-language">
-                                <span>@L["Language"]</span>
-                                <div class="version-select">
-                                    <div class="input-group">
-                                        @*<span class="input-group-text">
-                                                            <i class="fa fa-globe" aria-hidden="true" data-bs-toggle="tooltip" title="@L["Language"]"></i>
-                                                            </span>*@
-                                        <select asp-items="Model.LanguageSelectListItems"
-                                                class="form-select"
-                                                onchange="window.location.replace(this.value)">
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                }
-            </div>
-
-            <div class="docs-version">
-                <div class="version-select">
-                    <div class="input-group align-items-center">
-                        <span class="input-group-text">
-                            <i class="fa fa-search"></i>
-                        </span>
-                        <input class="form-control"
-                               id="filter"
-                               type="search"
-                               data-search-url="@Model."
-                               placeholder="@L["Search"].Value"
-                               aria-label="Filter">
-                    </div>
-                </div>
-            </div>
-
-            <div id="search-all-document" style="display: none;" class="search-all-document-container">
-                <button class="btn" type="button">
-                    <i class="fa fa-level-down" aria-hidden="true"></i>
-                    @L["SearchInTheAllDocuments"]
-                </button>
-            </div>
-
-            @if (Model.Navigation == null || !Model.Navigation.HasChildItems)
-            {
-                <div class="text-muted p-3">
-                    <i class="fa fa-warning"></i> @L["NavigationDocumentNotFound"]
-                </div>
-            }
-            else
-            {
-                <ul root-node="@Model.Navigation"
-                    version="@(Model.LatestVersionInfo == null || Model.LatestVersionInfo.IsSelected ? DocsAppConsts.Latest : Model.Version)"
-                    project-name="@Model.ProjectName"
-                    project-format="@Model.Project.Format"
-                    selected-document-name="@Model.DocumentNameWithExtension"
-                    language="@Model.LanguageCode"
-                    id="sidebar-scroll"
-                    class="nav nav-list">
-                </ul>
-            }
-        </div>
-    </div>
 
     @if (Model.Document != null)
     {
